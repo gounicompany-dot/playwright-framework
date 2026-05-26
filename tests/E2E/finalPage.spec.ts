@@ -40,7 +40,7 @@ test.describe("Final Page Tests", () => {
         await expect(elements.finalPageTitle).toBeVisible();
         await expect(elements.finalPageMessage).toBeVisible();
         await expect(elements.finalPageButton).toBeVisible();
-        await expect(page).toHaveURL("https://www.saucedemo.com/checkout-complete.html");
+        await expect(page).toHaveURL("https://www.saucedemo.com/checkout-complete.html/ajdajhgdahdgjgdhj");
     });
     test("validate final page message-1", async ({page}) => {
         const finalPageMessage = await finalPage.getFinalPageMessage();
@@ -51,5 +51,6 @@ test.describe("Final Page Tests", () => {
         await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html");
     });
     //this is for git branching and merging test, please ignore this test case
+    //conflict test
 
 });
