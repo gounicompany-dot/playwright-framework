@@ -40,7 +40,7 @@ test.describe("Final Page Tests", () => {
         await expect(elements.finalPageTitle).toBeVisible();
         await expect(elements.finalPageMessage).toBeVisible();
         await expect(elements.finalPageButton).toBeVisible();
-        await expect(page).toHaveURL("https://www.saucedemo.com/checkout-complete.html/ajdajhgdahdgjgdhj/CheckoutPage");
+        await expect(page).toHaveURL("https://www.saucedemo.com/checkout-complete.html");
     });
     test("validate final page message-1", async ({page}) => {
         const finalPageMessage = await finalPage.getFinalPageMessage();
