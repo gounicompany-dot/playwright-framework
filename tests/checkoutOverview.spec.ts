@@ -51,7 +51,7 @@ test.describe("Checkout Overview Page Tests", () => {
         //await expect(itemTotal).toBeCloseTo(calculatedItemTotal, 2);
         expect(itemTotal).toBe(calculatedItemTotal);
     });
-    test.only("Validate final Total price on checkout overview page(item total + tax)", async ({page}) => {
+    test("Validate final Total price on checkout overview page(item total + tax)", async ({page}) => {
         const itemTotal = await checkoutOverviewPage.getItemTotal();
         const tax = await checkoutOverviewPage.getTax();
         const finalTotal = await checkoutOverviewPage.getTotalPrice();
