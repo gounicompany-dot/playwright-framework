@@ -35,20 +35,21 @@ test.describe("Final Page Tests", () => {
         await checkoutOverviewPage.clickOnFinish();
     });
 
-    test("verify final page UI elements and Url", async ({page}) => {
+    test("verify final page UI elements and Url-1", async ({page}) => {
         const elements = await finalPage.getFinalPageElements();
         await expect(elements.finalPageTitle).toBeVisible();
         await expect(elements.finalPageMessage).toBeVisible();
         await expect(elements.finalPageButton).toBeVisible();
         await expect(page).toHaveURL("https://www.saucedemo.com/checkout-complete.html");
     });
-    test("validate final page message", async ({page}) => {
+    test("validate final page message-1", async ({page}) => {
         const finalPageMessage = await finalPage.getFinalPageMessage();
         expect(finalPageMessage).toBe("Thank you for your order!");
     });
-    test("validate back home button functionality on final page", async ({page}) => {
+    test("validate back home button functionality on final page-1", async ({page}) => {
         await finalPage.clickOnBackHome();
         await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html");
     });
+    //this is for git branching and merging test, please ignore this test case
 
 });
