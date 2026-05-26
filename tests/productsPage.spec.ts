@@ -45,7 +45,7 @@ test.describe("Products Page Tests", () => {
         console.log("Sorted Names:", sortedNames);
         expect(productNames).toEqual(sortedNames);
     })
-    test.only("Filter products by name Z to A", async ({page}) => {
+    test("Filter products by name Z to A", async ({page}) => {
         await productPage.filterProductsByNameZtoA();
         const productNames = await productPage.getProductNames();
         console.log("Product Names:", productNames);
@@ -61,7 +61,7 @@ test.describe("Products Page Tests", () => {
         console.log("Sorted Prices:", sortedPrices);
         expect(productPrices).toEqual(sortedPrices);
     });
-    test.only("Filter products by price high to low", async ({page}) => {
+    test("Filter products by price high to low", async ({page}) => {
         await productPage.filterProductsByPriceHighToLow();
         const productPrices = await productPage.getProductPrices();
         console.log("Product Prices:", productPrices);

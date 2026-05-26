@@ -47,7 +47,7 @@ test.describe("Checkout Page Tests", () => {
         await checkoutPage.clickOnContinue();
         await expect(page).toHaveURL("https://www.saucedemo.com/checkout-step-two.html");
     });
-    test.only("Validate error message on checkout information page when mandatory fields are empty", async ({page}) => {
+    test("Validate error message on checkout information page when mandatory fields are empty", async ({page}) => {
         await cartPage.clickOnCheckout();
         await expect(page).toHaveURL("https://www.saucedemo.com/checkout-step-one.html");
         await checkoutPage.clickOnContinue();
