@@ -50,5 +50,9 @@ test.describe("Final Page Tests", () => {
         await finalPage.clickOnBackHome();
         await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html");
     });
+    test("validate back home button functionality on final page-Merge test", async ({page}) => {
+        await finalPage.clickOnBackHome();
+        await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html");
+    });
 
 });
