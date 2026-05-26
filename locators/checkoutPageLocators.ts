@@ -1,0 +1,15 @@
+export const checkoutPageLocators = {
+    firstNameInput: "#first-name",
+    lastNameInput: "#last-name",
+    postalCodeInput: "#postal-code",
+    continueButton: "#continue",
+    cancelButton: "#cancel",
+    checkoutOverviewTitle: ".title",
+    checkoutItemNames: ".inventory_item_name",
+    checkoutItemDescription: ".inventory_item_desc",
+    checkoutItemPrice: ".inventory_item_price",
+    finishButton: "#finish",
+    checkoutCompleteTitle: ".complete-header",
+    checkoutCompleteText: ".complete-text",
+    errorMessage: 'h3[data-test="error"]',
+}
