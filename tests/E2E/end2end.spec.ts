@@ -9,7 +9,7 @@ import {BASE_URL, PASSWORD, USERNAME} from '../../utils/envConfig';
 import {checkoutData} from '../../test-data/checkout';
 import {test,expect} from "@playwright/test";
 
-test.describe("Final Page Tests", () => {
+test.describe("Final Page Tests-E2E", () => {
 
     let finalPage: FinalPage;
     let checkoutOverviewPage: CheckoutOverviewPage;
@@ -35,14 +35,14 @@ test.describe("Final Page Tests", () => {
         await checkoutOverviewPage.clickOnFinish();
     });
 
-    test("verify final page UI elements and Url-1", async ({page}) => {
+    test("verify final page UI elements and Url-1 -E2E", async ({page}) => {
         const elements = await finalPage.getFinalPageElements();
         await expect(elements.finalPageTitle).toBeVisible();
         await expect(elements.finalPageMessage).toBeVisible();
         await expect(elements.finalPageButton).toBeVisible();
         await expect(page).toHaveURL("https://www.saucedemo.com/checkout-complete.html/CheckoutPage");
     });
-    test("validate final page message-1", async ({page}) => {
+    test("validate final page message-1 -E2E", async ({page}) => {
         const finalPageMessage = await finalPage.getFinalPageMessage();
         expect(finalPageMessage).toBe("Thank you for your order!");
     });
