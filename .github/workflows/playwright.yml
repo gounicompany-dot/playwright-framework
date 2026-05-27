@@ -18,7 +18,7 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Run Sanity tests
-      run: npx playwright test tests/Sanity --reporter=html
+      run: npx playwright test tests/Sanity --reporter=html --project=chromium
     - 
       # if: ${{ !cancelled() }}
      if: always()
