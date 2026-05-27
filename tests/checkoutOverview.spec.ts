@@ -42,7 +42,7 @@ test.describe("Checkout Overview Page Tests", () => {
     });
     test("validate cancel button functionality on checkout overview page", async ({page}) => {
         await checkoutOverviewPage.clickOnCancel();
-        await expect(page).toHaveURL("https://www.saucedemo.com/checkout-step-one.html");
+        await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html");
     });
     test("Validate item total on checkout overview page", async ({page}) => {
         const overviewProducts = await checkoutOverviewPage.getOverviewProducts();
