@@ -58,7 +58,7 @@ test.describe("Cart Page Tests", () => {
         const cartProducts = await cartPage.getCartProducts();
         expect(cartProducts).toEqual(specificProductDetails);
     });
-    test.only("Validate remove product from cart functionality", async ({page}) => {
+    test("Validate remove product from cart functionality", async ({page}) => {
         await productPage.addallProductsToCart();
         await productPage.navigateToCart();
         const cartProductsBeforeRemoval = await cartPage.getCartProducts();
